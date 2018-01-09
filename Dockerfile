@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.7
 LABEL maintainer="Dan Milon <i@danmilon.me>"
 
 # Based on https://github.com/TheZ3ro/docker-tor-relay
@@ -10,8 +10,8 @@ ENV TORRC=/etc/tor/torrc.middle \
 
 RUN \
  apk add \
-    --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
-    --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
+    --repository http://dl-cdn.alpinelinux.org/alpine/v3.7/community \
+    --repository http://dl-cdn.alpinelinux.org/alpine/v3.7/main \
     --no-cache \
     gettext \
     tor && \
